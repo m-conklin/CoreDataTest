@@ -54,7 +54,10 @@ class ViewController: UIViewController {
         if let context = managedObjectContext {
             let orderResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [Order]
             for eachOrder in orderResults! {
-                println("\(eachOrder)")
+                println("First Name: \(eachOrder.firstName)")
+                println("Last Name: \(eachOrder.lastName)")
+                println("Order Number: \(eachOrder.orderNumber)")
+
             }
         }
         
